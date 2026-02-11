@@ -2,24 +2,24 @@
 using namespace std;
 
 int main() {
-    int arr[10] = {10, 20, 30, 40, 50};
-    int n = 5;
-    int oldValue = 30;
-    int newValue = 70;
+    double tempC, tempF;
 
-    
-    for (int i = 0; i < n; i++) {
-        if (arr[i] == oldValue) {
-            arr[i] = newValue;
-            break;   
-        }
+    cout << "Input temperature in Celsius: ";
+    cin >> tempC;
+
+    tempF = tempC * 9 / 5 + 32;
+
+    cout << tempC << " Celsius is equal to "
+         << tempF << " Fahrenheit." << endl;
+
+    if (tempC < 0) {
+        cout << "Weather is freezing." << endl;
     }
 
-    // Print array
-    cout << "Updated array:\n";
-    for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
+    if (tempC > 30) {
+        cout << "The temperature is very hot." << endl;
     }
 
     return 0;
 }
+
